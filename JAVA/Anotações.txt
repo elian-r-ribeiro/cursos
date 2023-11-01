@@ -69,15 +69,19 @@ Em pilhas, o .add retorna true ou false se conseguir ou não adicionar um elemen
 na pilha, enquanto o .push retorna um erro;
 
 Em pilhas, o .peek, .element, .poll e .remove funcionam da mesma maneira que na 
-fila (linha 62);
+fila (linha 63);
 
-Em pilhas, o .pop faz basicamente a mesma coisa que o .remove (linha 62);
+Em pilhas, o .pop faz basicamente a mesma coisa que o .remove (linha 63);
 
 Em Map, não utilizamos o .add, e sim o .put, ele não só serve para adicionar um valor,
 mas também pode substituir um valor já existente;
 
 Para criar um for-each que percorre tanto a chave quanto o valor para um map, devemos 
 utiliza a estrutura for(Entry<tipo, tipo> nome: nome.entrySet()){};
+
+Em uma interface, qualquer método é um método abstrato (que não possui corpo);
+
+Um método "final" não pode ser subreescrito em suas sub-classes;
 
 Inplementações de tipos de "arrays":
 Set: HashSet<tipo> nome = new HashSet<>();
