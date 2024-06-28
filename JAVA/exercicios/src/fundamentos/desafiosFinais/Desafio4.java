@@ -1,4 +1,4 @@
-package desafiosFinais;
+package fundamentos.desafiosFinais;
 
 import java.util.Scanner;
 
