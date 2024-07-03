@@ -6,19 +6,22 @@ public class Data {
 	int month;
 	int year;
 	
-	Data(int firstDay, int firstMonth, int firstYear) {
-		day = firstDay;
-		month = firstMonth;
-		year = firstYear;
+	Data(int day, int month, int year) {
+		this.day = day;
+		this.month = month;
+		this.year = year; 
 	}
 	
 	Data(){
-		day = 01;
-		month = 01;
-		year = 1970;
+		this(1, 1, 1970);
+	}
+	
+	void printFullDate() {
+		System.err.println(this.getFullDate());
 	}
 	
 	String getFullDate() {
-		return String.format("%d/%d/%d", day, month, year);
+		final String format = "%d/%d/%d";
+		return String.format(format, this.day, this.month, this.year);
 	}
 }
