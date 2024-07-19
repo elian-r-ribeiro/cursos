@@ -1,4 +1,9 @@
-package oo.heranca.desafio;
+package oo.heranca.teste;
+
+import oo.heranca.desafio.Carro;
+import oo.heranca.desafio.Corolla;
+import oo.heranca.desafio.Fusca;
+import oo.heranca.desafio.Lamborghini;
 
 public class CarroTeste {
 

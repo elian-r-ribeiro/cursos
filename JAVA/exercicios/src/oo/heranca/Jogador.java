@@ -2,9 +2,14 @@ package oo.heranca;
 
 public class Jogador {
 
-	int hp = 100;
-	int x;
-	int y;
+	public int hp = 100;
+	public int x;
+	public int y;
+	
+	public Jogador(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
 
 	boolean walk(Direcao direction) {
 
@@ -26,7 +31,7 @@ public class Jogador {
 		return true;
 	}
 
-	boolean attack(Jogador opponent) {
+	public boolean attack(Jogador opponent) {
 
 		int deltaX = Math.abs(x - opponent.x);
 		int deltaY = Math.abs(y - opponent.y);

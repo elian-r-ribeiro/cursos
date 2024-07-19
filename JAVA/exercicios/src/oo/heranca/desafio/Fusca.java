@@ -2,9 +2,15 @@ package oo.heranca.desafio;
 
 public class Fusca extends Carro {
 
+	private static int maxSpeed = 120;
+	
+	public Fusca() {
+		super(maxSpeed);
+	}
+	
 	@Override
-	void speedUp() {
-		if (super.currentSpeed < 120) {
+	public void speedUp() {
+		if (super.currentSpeed < maxSpeed) {
 			super.currentSpeed += 10;
 		} else {
 			System.out.println("Velocidade máxima atingida!");
@@ -12,7 +18,7 @@ public class Fusca extends Carro {
 	}
 	
 	@Override
-	void brake() {
+	public void brake() {
 		if (super.currentSpeed > 0) {
 			super.currentSpeed -= 10;
 		} else {

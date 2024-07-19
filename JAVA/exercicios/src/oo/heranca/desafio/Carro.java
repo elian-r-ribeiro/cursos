@@ -2,17 +2,22 @@ package oo.heranca.desafio;
 
 public class Carro {
 
-	int currentSpeed;
+	public int currentSpeed;
+	protected int maxSpeed = 200;
 	
-	void speedUp() {
-		if (currentSpeed < 200) {
+	public Carro(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
+	
+	public void speedUp() {
+		if (currentSpeed < maxSpeed) {
 			currentSpeed += 20;
 		} else {
 			System.out.println("Velocidade máxima atingida!");
 		}
 	}
 	
-	void brake() {
+	public void brake() {
 		if (currentSpeed > 0) {
 			currentSpeed -= 20;
 		} else {
