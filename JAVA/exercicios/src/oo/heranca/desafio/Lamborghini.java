@@ -1,28 +1,20 @@
 package oo.heranca.desafio;
 
-public class Lamborghini extends Carro {
-
-	private static int maxSpeed = 350;
+public class Lamborghini extends Carro implements Esportivo {
 	
 	public Lamborghini() {
-		super(maxSpeed);
+		maxSpeed = 350;
+		speedUpDelta = 40;
+		brakeDelta = 40;
 	}
 	
 	@Override
-	public void speedUp() {
-		if (super.currentSpeed < maxSpeed) {
-			super.currentSpeed += 40;
-		} else {
-			System.out.println("Velocidade máxima atingida!");
-		}
+	public void turnOnTurbo() {
+		speedUpDelta = 50;
 	}
 	
 	@Override
-	public void brake() {
-		if (super.currentSpeed > 0) {
-			super.currentSpeed -= 40;
-		} else {
-			System.out.println("O carro está parado!");
-		}
+	public void turnOffTurbo() {
+		speedUpDelta = 40;
 	}
 }
