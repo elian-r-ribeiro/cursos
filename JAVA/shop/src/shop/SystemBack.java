@@ -1,6 +1,7 @@
 package shop;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,14 +14,40 @@ public class SystemBack {
 
 	static public void addProduct() {
 		System.out.println("===============================");
-		System.out.print("Digite o nome do item: ");
 		
-		String newProductName = input.nextLine();
+		String newProductName = "";
 		
-		System.out.print("Digite o preço do item: R$");
+		while(true) {
+			System.out.print("Digite o nome do item: ");
+			
+			newProductName = input.nextLine();
+			
+			if(newProductName.equalsIgnoreCase("")) {
+				System.out.println("O nome do produto é obrigatório");
+			} else {
+				break;
+			}
+		}
 		
-		double newProductPrice = input.nextDouble();
-		input.nextLine();
+		double newProductPrice = 0;
+		
+		while(true) {
+			System.out.print("Digite o preço do item: R$");
+			
+			try {
+				newProductPrice = input.nextDouble();
+				input.nextLine();
+				
+				if(newProductPrice <= 0) {
+					System.out.println("Valor do produto inválido");
+				} else {
+					break;
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("Por favor, insira um número válido.");
+				input.next();
+			}
+		}
 		
 		Product newProduct = new Product(
 				newProductName, newProductPrice);
@@ -43,9 +70,26 @@ public class SystemBack {
 		
 		String finishedLabel = "Item removido com sucesso!";
 		
-		System.out.printf("Qual item deseja %s? ", buyOrRemoveLabel);
+		int userChoice = 0;
 		
-		int userChoice = input.nextInt();
+		while(true) {
+			System.out.printf("Qual item deseja %s? ", buyOrRemoveLabel);
+			
+			try {
+				userChoice = input.nextInt();
+				
+				if(userChoice < productsList.size() || 
+						userChoice > productsList.size()) {
+					System.out.println("Número inválido, tente novamente.");
+				} else {
+					break;
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("Por favor, insira um número válido.");
+				input.next();
+			}
+			
+		}
 		
 		if(buyOrRemoveLabel.equals("comprar")) {
 			shopMoney += SystemBack.productsList
@@ -65,7 +109,7 @@ public class SystemBack {
 		System.out.println("===============================");
 		
 		for(Product product: SystemBack.productsList) {
-			System.out.printf("[%d] %s - %.2f", 
+			System.out.printf("[%d] %s - R$%.2f", 
 					itemsCounter, product.getName(), product.getPrice());
 			System.out.println();
 			

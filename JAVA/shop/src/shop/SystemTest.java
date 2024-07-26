@@ -19,28 +19,31 @@ public class SystemTest {
 			System.out.println("[6] Desligar sistema");
 			System.out.print("Oque deseja fazer? ");
 			
-			int userChoice = input.nextInt();
+			String userChoice = input.nextLine().trim();
 			           
 			switch (userChoice) {
-			case 1:
+			case "1":
 				SystemBack.getShopItems();
 				break;
-			case 2:
+			case "2":
 				SystemBack.addProduct();
 				break;
-			case 3:
+			case "3":
 				SystemBack.removeProduct();
 				break;
-			case 4:
+			case "4":
 				SystemBack.buyProduct();
 				break;
-			case 5:
+			case "5":
 				SystemBack.getShopMoney();
 				break;
-			case 6:
+			case "6":
 				System.out.println("Até mais!");
 				systemIsOn = false;
-			}
+				break;
+			default:
+				System.out.println("Opção inválida");
+			} 
 		}
 		
 		input.close();
