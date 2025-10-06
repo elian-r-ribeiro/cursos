@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio CSS</title>
+    <style>
+        html{
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .containerPrincipal{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .containerInterno{
+            height: 400px;
+            width: 280px;
+            background-color: rgb(37, 37, 37);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .informacoesDoProduto{
+           padding: 15px; 
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           height: 100%;
+        }
+
+        .informacoesDoProduto h3{
+            margin: 0;
+        }
+        
+        .informacoesDoProduto p{
+            margin: 0;
+        }
+
+        .estrela{
+            width: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="containerPrincipal">
+        <h1>Desafio CSS</h1>
+        <div class="containerInterno">
+            <img class="imagemDoProduto" src="https://img.freepik.com/fotos-gratis/fundo-de-tecnologia-do-circuito-da-placa-mae-em-gradiente-azul_53876-124645.jpg?semt=ais_hybrid&w=740" 
+            alt="Imagem do produto">
+            <div class="informacoesDoProduto">
+                <h3 class="tituloProduto">Kit Atenado 2024</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed scelerisque est. Donec egestas lorem eget mattis commodo. Pellentesque quis.</p>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Full_Star_Yellow.svg/2048px-Full_Star_Yellow.svg.png" 
+                    alt="Imagem de estrela"
+                    class="estrela">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Full_Star_Yellow.svg/2048px-Full_Star_Yellow.svg.png" 
+                    alt="Imagem de estrela"
+                    class="estrela">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Full_Star_Yellow.svg/2048px-Full_Star_Yellow.svg.png" 
+                    alt="Imagem de estrela"
+                    class="estrela">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Full_Star_Yellow.svg/2048px-Full_Star_Yellow.svg.png" 
+                    alt="Imagem de estrela"
+                    class="estrela">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Full_Star_Yellow.svg/2048px-Full_Star_Yellow.svg.png" 
+                    alt="Imagem de estrela"
+                    class="estrela">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

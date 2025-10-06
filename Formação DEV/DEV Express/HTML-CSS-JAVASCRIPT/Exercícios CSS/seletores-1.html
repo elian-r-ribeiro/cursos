@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Seletores CSS</title>
+        <style>
+            div {
+                font-size: 30px;
+            }
+
+            #primeiro-texto {
+                font-size: 45px;
+                font-weight: 900;
+            }
+
+            .destaque {
+                background-color: red;
+                color: white;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            [chiq]{
+                letter-spacing: 10px;
+            }
+
+            button{
+                background-color: blue;
+                color: white;
+                padding: 8px 20px;
+                border-radius: 5px;
+                border: 0px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seletores #1</h1>
+        <div id="primeiro-texto">Texto #1</div>
+        <div class="destaque">Texto #2</div>
+        <div>Texto #3</div>
+        <div class="destaque" chiq>Texto #4</div>
+        <div>Texto #5</div>
+        <div>
+            <button>Salvar</button>
+        </div>
+    </body>
+</html>

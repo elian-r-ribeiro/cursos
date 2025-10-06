@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulário de Cadastro</title>
+    </head>
+
+    <body>
+        <h1>Cadastro de Receita/Despesa</h1>
+        <form action="save">
+            <b><span>Descrição</span></b>
+            <br>
+            <input type="text" name="description">
+            <br>
+            <b><span>Observação</span></b>
+            <br>
+            <input type="text" name="observation">
+            <br>
+            <b><span>Tipo</span></b>
+            <br>
+            <input type="radio" name="whattype" value="receita"> Receita
+            <input type="radio" name="whattype" value="despesa"> Despesa
+            <br>
+            <b><span>Valor</span></b>
+            <br>
+            <input type="number" name="whatvalue" min="0">
+            <br>
+            <b><span>Consolidado?</span></b>
+            <br>
+            <input type="checkbox" name="consolidated" value="yes">
+            <br>
+            <b><span>Conta associada</span></b>
+            <br>
+            <select name="account">
+                <option value="1">Nenhuma</option>
+                <option value="2">Conta Corrente BB</option>
+                <option value="3">Conta Corrente NuBank</option>
+                <option value="4">Conta Itaú Empresa</option>
+            </select>
+            <br>
+            <button>Salvar</button>
+            <button>Cancelar</button>
+        </form>
+    </body>
+</html>

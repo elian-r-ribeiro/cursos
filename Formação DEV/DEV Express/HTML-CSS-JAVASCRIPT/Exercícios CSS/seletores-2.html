@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Seletores CSS</title>
+        <style>
+            button{
+                background-color: blue;
+                color: white;
+                padding: 8px 20px;
+                border-radius: 5px;
+                border: 0px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: rgba(0, 0, 255, 0.19);
+            }
+
+            span:nth-child(1){
+                background-color: purple;
+                color: white;
+                padding: 10px;
+            }
+
+            div, span{
+                font-size: 30px;
+            }
+
+            div span{
+                font-size: 45px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seletores #2</h1>
+        <div>
+            <button>Salvar</button>
+        </div>
+        <div>
+            <span>Texto #1</span>
+        </div>
+        <span>Texto #2</span>
+    </body>
+</html>
